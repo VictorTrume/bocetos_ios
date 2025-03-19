@@ -11,10 +11,10 @@ struct ContentView: View {
     
     @Environment(VistaModeloBasico.self)
     private var controlador
-    @State var mostrar_agregar_pantalla: Bool = false
+    @State var mostrar_agregar_serie: Bool = false
     
     var body: some View {
-        if !mostrar_agregar_pantalla{
+        if !mostrar_agregar_serie{
             ScrollView{
                 VStack {
                     ForEach(controlador.series_registradas){
@@ -28,7 +28,7 @@ struct ContentView: View {
             Spacer()
             
             Button("Agrega por favor una serie de pruebas"){
-                mostrar_agregar_pantalla = true
+                mostrar_agregar_serie = true
                 
             }
         }

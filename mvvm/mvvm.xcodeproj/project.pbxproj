@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FB3AA3242D8B1C2800978E50 /* agregar_serie.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3AA3232D8B1C2800978E50 /* agregar_serie.swift */; };
+		FB3AA3262D8B2AE800978E50 /* estados_de_la_aplicacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3AA3252D8B2AE800978E50 /* estados_de_la_aplicacion.swift */; };
 		FBF0B9832D84826B00AC0836 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF0B9822D84826B00AC0836 /* ContentView.swift */; };
 		FBF0B9852D84826B00AC0836 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBF0B9842D84826B00AC0836 /* Assets.xcassets */; };
 		FBF0B9882D84826B00AC0836 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBF0B9872D84826B00AC0836 /* Preview Assets.xcassets */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		FB3AA3232D8B1C2800978E50 /* agregar_serie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = agregar_serie.swift; sourceTree = "<group>"; };
+		FB3AA3252D8B2AE800978E50 /* estados_de_la_aplicacion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = estados_de_la_aplicacion.swift; sourceTree = "<group>"; };
 		FBF0B97D2D84826B00AC0836 /* mvvm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mvvm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBF0B9822D84826B00AC0836 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FBF0B9842D84826B00AC0836 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 			children = (
 				FBF0B9922D848B0F00AC0836 /* New Group */,
 				FBF0B9932D848B3400AC0836 /* vista_modelo_basico.swift */,
+				FB3AA3252D8B2AE800978E50 /* estados_de_la_aplicacion.swift */,
 			);
 			path = vistas_modelos;
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 			files = (
 				FBF0B9912D8483EA00AC0836 /* serie_informacion.swift in Sources */,
 				FBF0B9832D84826B00AC0836 /* ContentView.swift in Sources */,
+				FB3AA3262D8B2AE800978E50 /* estados_de_la_aplicacion.swift in Sources */,
 				FBF0B9942D848B3400AC0836 /* vista_modelo_basico.swift in Sources */,
 				FB3AA3242D8B1C2800978E50 /* agregar_serie.swift in Sources */,
 				FBF0B9962D848C8C00AC0836 /* primera_pantalla.swift in Sources */,

@@ -8,7 +8,10 @@
 import Foundation
 
 @Observable
+
 class VistaModeloBasico{
+    var estado_actual_de_la_aplicacion: EstadosAplicacion = .mostrando_series
+    
     var series_registradas: Array<InformacionSerie> = []
     
     func agregar_serie(serie: InformacionSerie? = nil) -> Bool{
