@@ -11,8 +11,16 @@ import Foundation
 class VistaModeloBasico{
     var series_registradas: Array<InformacionSerie> = []
     
-    func agregar_serie() -> Void{
-        print("Hola mundo desde el controlador")
-        series_registradas.append(InformacionSerie(nombre: "purueba", tipo: "Prueba", fecha_estreno: 2017, sinopsis: "Aqui va mi sinopsis", caraturla: "caratula.png"))
+    func agregar_serie(serie: InformacionSerie? = nil) -> Bool{
+        if let serie_nueva = serie{
+            if serie_nueva.nombre == ""{
+               return false
+            }
+            series_registradas.append(serie_nueva)
+        }
+        else{
+            series_registradas.append(InformacionSerie(nombre: "purueba", tipo: "Prueba", fecha_estreno: 2017, sinopsis: "Aqui va mi sinopsis", caraturla: "caratula.png"))
+        }
+       return true
     }
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB3AA3242D8B1C2800978E50 /* agregar_serie.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3AA3232D8B1C2800978E50 /* agregar_serie.swift */; };
 		FBF0B9832D84826B00AC0836 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF0B9822D84826B00AC0836 /* ContentView.swift */; };
 		FBF0B9852D84826B00AC0836 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBF0B9842D84826B00AC0836 /* Assets.xcassets */; };
 		FBF0B9882D84826B00AC0836 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBF0B9872D84826B00AC0836 /* Preview Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FB3AA3232D8B1C2800978E50 /* agregar_serie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = agregar_serie.swift; sourceTree = "<group>"; };
 		FBF0B97D2D84826B00AC0836 /* mvvm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mvvm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBF0B9822D84826B00AC0836 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FBF0B9842D84826B00AC0836 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -36,6 +38,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FB3AA3222D8B1C0700978E50 /* pantallas */ = {
+			isa = PBXGroup;
+			children = (
+				FB3AA3232D8B1C2800978E50 /* agregar_serie.swift */,
+			);
+			path = pantallas;
+			sourceTree = "<group>";
+		};
 		FBF0B9742D84826B00AC0836 = {
 			isa = PBXGroup;
 			children = (
@@ -55,6 +65,7 @@
 		FBF0B97F2D84826B00AC0836 /* mvvm */ = {
 			isa = PBXGroup;
 			children = (
+				FB3AA3222D8B1C0700978E50 /* pantallas */,
 				FBF0B98F2D84834300AC0836 /* vistas_modelos */,
 				FBF0B98E2D84832A00AC0836 /* modelos */,
 				FBF0B9822D84826B00AC0836 /* ContentView.swift */,
@@ -170,6 +181,7 @@
 				FBF0B9912D8483EA00AC0836 /* serie_informacion.swift in Sources */,
 				FBF0B9832D84826B00AC0836 /* ContentView.swift in Sources */,
 				FBF0B9942D848B3400AC0836 /* vista_modelo_basico.swift in Sources */,
+				FB3AA3242D8B1C2800978E50 /* agregar_serie.swift in Sources */,
 				FBF0B9962D848C8C00AC0836 /* primera_pantalla.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
