@@ -15,26 +15,37 @@ struct AgregarSerie: View {
     
     @State var nombre_plataforma: String = ""
     @State var imagen_plataforma: String = ""
+    @State var plataforma_seleccionada: String = ""
     
     @State var indicar_problemas: Bool = false
     @State var mostar_agregar_plataformas: Bool = false
     
     var body: some View {
-        Text("Hola mundo")
+        Spacer()
+        Text("Lista de Series")
+            .font(.title)
+            
+            .bold()
         TextField("El nombre de la serie", text: $nombre_de_la_serie)
+            .padding()
+            .background(Color.gray.opacity(0.2))
         if indicar_problemas{
             Text("Tu serie no tiene nombre y no jala jajajajajaja")
         }
         TextField("Tipo", text: $tipo_de_la_serie)
+            .padding()
+            .background(Color.gray.opacity(0.2))
         
-        Spacer()
+        
         Text("Plataformas")
+            .bold()
+            .padding()
         ScrollView(.horizontal){
             
             HStack{
                 ForEach(plataformas){ plataforma in
                     Text(plataforma.nombre)
-                    
+                        .padding()
                 }
             }
         }.sheet(isPresented: $mostar_agregar_plataformas){
@@ -52,6 +63,7 @@ struct AgregarSerie: View {
             }
             
             Button("Agregar plataforma"){
+           
                 if !nombre_plataforma.isEmpty && !imagen_plataforma.isEmpty{
                     let plataforma_nueva = Plataforma(nombre: nombre_plataforma, imagen: imagen_plataforma)
                     
@@ -70,6 +82,8 @@ struct AgregarSerie: View {
         Button("Agregar Plataforma"){
             mostar_agregar_plataformas = true
         }
+        .bold()
+        
        
         
         Button("Agregar serie"){
@@ -82,6 +96,8 @@ struct AgregarSerie: View {
         
           
         }
+        .bold()
+        Spacer()
         Spacer()
     }
     

@@ -21,7 +21,9 @@ struct ContentView: View {
         else{
             AgregarSerie()
         }
+        
     }
+
 }
 
 #Preview {
