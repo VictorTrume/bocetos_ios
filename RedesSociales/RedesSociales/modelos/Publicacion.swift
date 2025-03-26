@@ -16,7 +16,7 @@ struct Publicacion: Identifiable, Codable{
     let userId: Int
     let id: Int
     
-    let tittle: String
+    let title: String
     let body : String
 }
 
