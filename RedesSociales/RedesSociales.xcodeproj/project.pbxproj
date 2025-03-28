@@ -19,6 +19,8 @@
 		FB8C0EC42D91B4AD00194EDE /* errores.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8C0EC32D91B4AD00194EDE /* errores.swift */; };
 		FB8C0EC62D91BC4200194EDE /* controlador_publicaciones.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8C0EC52D91BC4200194EDE /* controlador_publicaciones.swift */; };
 		FB8C0ECA2D91BE2900194EDE /* publicaciones_general.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8C0EC92D91BE2900194EDE /* publicaciones_general.swift */; };
+		FBEB2D7C2D9700FB0033CC2B /* perfil.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEB2D7B2D9700FB0033CC2B /* perfil.swift */; };
+		FBEB2D7F2D9704610033CC2B /* perfil_vista_basica.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEB2D7E2D9704610033CC2B /* perfil_vista_basica.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,8 @@
 		FB8C0EC32D91B4AD00194EDE /* errores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = errores.swift; sourceTree = "<group>"; };
 		FB8C0EC52D91BC4200194EDE /* controlador_publicaciones.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = controlador_publicaciones.swift; sourceTree = "<group>"; };
 		FB8C0EC92D91BE2900194EDE /* publicaciones_general.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = publicaciones_general.swift; sourceTree = "<group>"; };
+		FBEB2D7B2D9700FB0033CC2B /* perfil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = perfil.swift; sourceTree = "<group>"; };
+		FBEB2D7E2D9704610033CC2B /* perfil_vista_basica.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = perfil_vista_basica.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +96,7 @@
 			children = (
 				FB8C0EBF2D91B27000194EDE /* Publicacion.swift */,
 				FB1F7EB92D94633100363E73 /* comentario.swift */,
+				FBEB2D7B2D9700FB0033CC2B /* perfil.swift */,
 			);
 			path = modelos;
 			sourceTree = "<group>";
@@ -117,6 +122,7 @@
 		FB8C0EC72D91BDEA00194EDE /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				FBEB2D7D2D9704490033CC2B /* perfil_basico */,
 				FB8C0EC82D91BE1000194EDE /* publicaciones */,
 			);
 			path = ui;
@@ -129,6 +135,14 @@
 				FB1F7EB72D945E8900363E73 /* publicacion.swift */,
 			);
 			path = publicaciones;
+			sourceTree = "<group>";
+		};
+		FBEB2D7D2D9704490033CC2B /* perfil_basico */ = {
+			isa = PBXGroup;
+			children = (
+				FBEB2D7E2D9704610033CC2B /* perfil_vista_basica.swift */,
+			);
+			path = perfil_basico;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,7 +217,9 @@
 			files = (
 				FB8C0ECA2D91BE2900194EDE /* publicaciones_general.swift in Sources */,
 				FB8C0EC22D91B49B00194EDE /* placeholder_api.swift in Sources */,
+				FBEB2D7F2D9704610033CC2B /* perfil_vista_basica.swift in Sources */,
 				FB1F7EB62D94537200363E73 /* contrador_app.swift in Sources */,
+				FBEB2D7C2D9700FB0033CC2B /* perfil.swift in Sources */,
 				FB8C0EC02D91B27000194EDE /* Publicacion.swift in Sources */,
 				FB1F7EBA2D94633100363E73 /* comentario.swift in Sources */,
 				FB1F7EB82D945E8900363E73 /* publicacion.swift in Sources */,
