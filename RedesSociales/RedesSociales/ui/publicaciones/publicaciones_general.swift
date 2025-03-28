@@ -13,34 +13,34 @@ struct GeneralPublicaciones: View{
     @Environment(ControladorAplicacion.self) var controlador
     
     var body: some View{
-        ScrollView{
-            VStack{
-                ForEach(controlador.publicaciones){ publicacion in
-                    NavigationLink{
-                        Text("Hola Mundo")
-                    } label: {
-                        HStack{
-                            Text("\(publicacion.id)")
-                            VStack{
-                                Text("\(publicacion.title)")
-                                Text("\(publicacion.body)")
+        NavigationStack{
+            ScrollView{
+                VStack{
+                    ForEach(controlador.publicaciones){ publicacion in
+                        NavigationLink{
+                            PublicacionVista()
+                        } label: {
+                            HStack{
+                                Text("\(publicacion.id)")
+                                VStack{
+                                    Text("\(publicacion.title)")
+                                    Text("\(publicacion.body)")
+                                    
+                                }
+                                
+                                
                             }
-                            
-                            
-                        }
-                        /*
-                        .onTapGesture {
-                            //controlador.mostrar_publicacion(publicacion.id)
-                            print("Usted ha seleccionado: \(publicacion.id)")
-                        }
-                         */
+                          
+                        }  .simultaneousGesture(TapGesture().onEnded({
+                            controlador.seleccionar_publicacion(publicacion)
+                        }))
                     }
                 }
             }
-        }
-        .onAppear{
-         print("hola mundo")
-            
+            .onAppear{
+                print("hola mundo")
+                
+            }
         }
     }
 }
