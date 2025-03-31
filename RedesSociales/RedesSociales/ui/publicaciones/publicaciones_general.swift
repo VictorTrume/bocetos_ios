@@ -22,19 +22,33 @@ struct GeneralPublicaciones: View{
                         } label: {
                             HStack{
                                 Text("\(publicacion.id)")
+                                    .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                                    .font(.system(size: 20))
+                                
+                                   
                                 VStack{
                                     Text("\(publicacion.title)")
+                                        .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                                        .font(.system(size: 25))
+                                        .frame(maxWidth: .infinity)
                                     Text("\(publicacion.body)")
+                                        .frame(maxWidth: .infinity)
                                     
                                 }
                                 
                                 
-                            }
-                          
+                            }.background(Color.black)
+                                .foregroundColor(.white)
+                                .padding()
+                                .cornerRadius(80)
+                            
+                             
+                                
                         }  .simultaneousGesture(TapGesture().onEnded({
                             controlador.seleccionar_publicacion(publicacion)
                         }))
                     }
+                    
                 }
             }
             .onAppear{

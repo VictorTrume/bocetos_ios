@@ -17,6 +17,7 @@ struct PerfilBasicoVista: View{
             .onDisappear(){
                 print("Adios papus")
             }
+        
     }
 }
 
