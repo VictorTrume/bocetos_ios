@@ -18,16 +18,17 @@ struct PublicacionVista: View{
     var body: some View{
         
         Text("\(controlador.publicacion_seleccionada?.title ?? "Valor por defecto")")
-            .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-            .foregroundColor(.white)
+            .fontWeight(.bold)
+            .foregroundColor(.white)  
             .font(.system(size: 25))
-            .background(Color.black)
-            
             .frame(maxWidth: .infinity)
+            .background(Color.black)
+         
         Text("\(controlador.publicacion_seleccionada?.body ?? "Valor por defecto")")
             .foregroundColor(.white)
-            .background(Color.black)
             .frame(maxWidth: .infinity)
+            .background(Color.black)
+
         Spacer()
         NavigationLink{
             PerfilBasicoVista()
@@ -37,18 +38,21 @@ struct PublicacionVista: View{
             controlador.ver_perfil(id: controlador.publicacion_seleccionada!.userId)
         })).fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
             .font(.system(size: 15))
+            .foregroundColor(.white)
+            .frame(maxWidth: .infinity)
             .background(Color.blue)
-                .foregroundColor(.white)
-                .frame(maxWidth: .infinity)
-                .cornerRadius(80)
+       
+       
         
         ScrollView{
             VStack{
                 ForEach(controlador.comentarios){ comentario in
                     Text("Usuario: \(comentario.name)")
                     Text("\(comentario.body)")
+                        
                     
                 }
+                
             }
         }
     }
