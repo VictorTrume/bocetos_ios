@@ -11,9 +11,10 @@ import SwiftUI
 @MainActor
 struct RedesSocialesApp: App {
     @State var controlador = ControladorAplicacion()
+    
     var body: some Scene {
         WindowGroup {
-            GeneralPublicaciones()
+            MenuNavegacion()
                 .environment(controlador)
         }
     }

@@ -21,16 +21,17 @@ struct MenuNavegacion: View {
                 .tabItem{Label("Es esta pantalla",
                                systemImage: "curcke")}
             
-            Text("Hola dos")
+            PantallaPersonajes()
                 .tabItem{
                     Label{
-                        Text("Dragon Ball DB")
-                        Text("Esto es un segundo click")
+                        VStack{
+                            Text("Dragon Ball DB")
+                        }
+                        
                     } icon: {
                         Circle()
-                            .frame(width: 44,height: 44,
-                        alignment: .center)
-                            .overlay(Text("Paquito el paco"))
+                        .frame(width: 44,height: 44,alignment: .center)
+                        .overlay(Text("Paquito el paco"))
                     }
                 }
             Text("Hola desde pantalla 3")

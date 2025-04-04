@@ -27,20 +27,20 @@ class PlaceHolderAPI: Codable{
     
     private func descargar<TipoGenerico: Codable>(recurso: String) async -> TipoGenerico? {
         do{
-            guard let url = URL(string: "\(url_de_servicio)\(recurso)") else{ throw ErroresDeRed.malaDireccionUrl}
+            guard let url = URL(string: "\(url_de_servicio)\(recurso)") else{ throw ErroresDeRed.badURL}
             let (datos, respuesta) = try await URLSession.shared.data(from: url)
             guard let respuesta = respuesta as? HTTPURLResponse else {throw ErroresDeRed.badResponse}
             guard respuesta.statusCode >= 200 && respuesta.statusCode < 300 else {throw ErroresDeRed.badStatus}
             guard let respuesta_decodificada = try? JSONDecoder().decode(TipoGenerico.self, from: datos) else{throw
-                ErroresDeRed.fallaAlConvertirLaRespuesta}
+                ErroresDeRed.fallaAlConvertirRespuesta}
             return respuesta_decodificada
-        } catch ErroresDeRed.malaDireccionUrl {
+        } catch ErroresDeRed.badURL {
             print("Tenes mal la url cambiala y escribe bien")
         }catch ErroresDeRed.badResponse{
             print("Tu respuesta esta mal")
         }catch ErroresDeRed.badStatus{
             print("como lograste optener un estatus negativo")
-        }catch ErroresDeRed.fallaAlConvertirLaRespuesta{
+        }catch ErroresDeRed.fallaAlConvertirRespuesta{
             print ("Tienes mal el modelo o su implementacion")
         }catch ErroresDeRed.invalidRequest{
             print("Como lo lograste papu")
