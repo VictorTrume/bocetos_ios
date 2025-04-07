@@ -16,6 +16,10 @@ public class ControladorAplicacion{
     var publicacion_seleccionada: Publicacion? = nil
     var perfil_a_mostrar: Perfil? = nil
     
+    var personaje_seleccionado: MonoChino? = nil
+    var planeta_a_mostrar: Planeta? = nil
+    var transformaciones_a_mostrar: Transformacion? = nil
+    
     // Seccion Dragon Ball
     var pagina_resultados: PaginaResultado? = nil
     
@@ -51,6 +55,9 @@ public class ControladorAplicacion{
         
     }
     
+    
+   
+    
     func seleccionar_publicacion(_ publicacion: Publicacion) -> Void{
         publicacion_seleccionada = publicacion
         
@@ -69,5 +76,15 @@ public class ControladorAplicacion{
         Task.detached{
             await self.descargar_perfil(id: id)
         }
+    }
+    
+    func seleccionar_personaje(_ personaje: MonoChino) -> Void{
+        personaje_seleccionado = personaje
+        
+        Task.detached(operation: {
+            await self.descargar_comentarios()
+        })
+        
+        
     }
 }
