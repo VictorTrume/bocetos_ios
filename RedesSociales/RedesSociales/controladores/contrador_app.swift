@@ -22,7 +22,7 @@ public class ControladorAplicacion{
     
     // Seccion Dragon Ball
     var pagina_resultados: PaginaResultado? = nil
-    
+    var personaje : MonoChino? = nil
     
     init(){
         Task.detached(priority: .high){
@@ -32,11 +32,14 @@ public class ControladorAplicacion{
         }
     }
     
+    
     func descargar_monos_chinos() async{
-        guard let pagina_descargada: PaginaResultado = try? await DragonBallAPI().descargar_pagina_personajes() else {return }
+        guard let pagina_descargada: PaginaResultado = try? await DragonBallAPI().descargar_pagina_personajes() else{return}
         
         self.pagina_resultados = pagina_descargada
     }
+    
+    
     func descargar_publicaciones() async{
         defer{
             print("Esta funcion se mando a llamar despues de todos los await \(#function)")
@@ -67,6 +70,7 @@ public class ControladorAplicacion{
         
         
     }
+    
     func descargar_perfil(id: Int)  async -> Void {
         guard let perfil: Perfil = try? await PlaceHolderAPI().descargar_perfil(id: id) else {return}
         perfil_a_mostrar = perfil
@@ -85,6 +89,19 @@ public class ControladorAplicacion{
             await self.descargar_comentarios()
         })
         
-        
     }
+    
+    func descargar_info_personaje(id: Int) async{
+        guard let mono_chino: MonoChino = try? await DragonBallAPI().descargar_informacion_personajes(id: id) else {return}
+        
+        self.personaje = mono_chino
+    }
+    
+    func descargar_informacion_personaje(id: Int){
+        Task.detached(operation: {
+            await self.descargar_info_personaje(id: id)
+        })
+    }
+    
+ 
 }
