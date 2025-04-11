@@ -11,53 +11,53 @@ struct DetallesPersonaje: View {
             ScrollView{
                 VStack {
                     Text("\(controlador.personaje?.name ?? "Valor por defecto")")
-                        .font(.system(size: 30))
+                        .font(.largeTitle)
                         .bold()
                         .foregroundColor(.white)
-                        .frame(maxWidth: .infinity)
-                        .background(Color.orange)
+                        .padding(.top)
+                        .frame(maxWidth: .infinity, alignment: .center)
                     Text("Afiliacion:  \(controlador.personaje?.affiliation ?? "Valor por defecto")")
-                        .font(.system(size: 20))
-                        .bold()
+                        .font(.title2)
                         .foregroundColor(.white)
-                        .frame(maxWidth: .infinity)
-                        .background(Color.orange)
                     Text("Planeta de Origen: \(controlador.personaje?.originPlanet?.name ?? "Valor por defecto")")
-                        .font(.system(size: 20))
-                        .bold()
+                        .font(.title2)
                         .foregroundColor(.white)
-                        .frame(maxWidth: .infinity)
-                        .background(Color.orange)
                     
                     if let url = URL(string: controlador.personaje?.image ?? "aqui va mi imagen"){
                         AsyncImage(url: url) { imagen in
                             imagen.image?
                                 .resizable()
                                 .scaledToFit()
+                                .cornerRadius(12)
+                                
                         }
                         .frame(width: 150, height: 200)
+                        .cornerRadius(12)
                     }
                     
                     Text("\(controlador.personaje?.description ?? "Valor por defecto")")
                         .foregroundColor(.white)
-                        .frame(maxWidth: .infinity)
+                        .font(.body)
+                        .padding(.top)
                     
                     
                     
                     Spacer()
                     
                     NavigationLink {
-                        PerfilBasicoVista()
+                        PerfilTransformacion()
                     } label: {
-                        Text("Ver perfil")
+                        Text("Ver Transformaciones")
                             .fontWeight(.bold)
-                            .font(.system(size: 15))
+                            .font(.system(size: 18))
                             .foregroundColor(.white)
                             .frame(maxWidth: .infinity)
+                            .padding()
                             .background(Color.yellow)
+                            .cornerRadius(10)
+                            .shadow(radius: 5)
                     }
                     .simultaneousGesture(TapGesture().onEnded({
-                        controlador.ver_perfil(id: controlador.publicacion_seleccionada!.userId)
                     }))
                 }
                 .padding()
