@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB13CB6A2DBFDE7B00D489F3 /* perfil_planeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB13CB692DBFDE7B00D489F3 /* perfil_planeta.swift */; };
 		FB1F7EB62D94537200363E73 /* contrador_app.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1F7EB52D94537200363E73 /* contrador_app.swift */; };
 		FB1F7EB82D945E8900363E73 /* publicacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1F7EB72D945E8900363E73 /* publicacion.swift */; };
 		FB1F7EBA2D94633100363E73 /* comentario.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1F7EB92D94633100363E73 /* comentario.swift */; };
@@ -33,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FB13CB692DBFDE7B00D489F3 /* perfil_planeta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = perfil_planeta.swift; sourceTree = "<group>"; };
 		FB1F7EB52D94537200363E73 /* contrador_app.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = contrador_app.swift; sourceTree = "<group>"; };
 		FB1F7EB72D945E8900363E73 /* publicacion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = publicacion.swift; sourceTree = "<group>"; };
 		FB1F7EB92D94633100363E73 /* comentario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = comentario.swift; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 				FBB43E922DA0341200314129 /* PantallaPersonajes.swift */,
 				FBD599472DA426F80089746A /* PublicacionDB.swift */,
 				FB9242B92DA96BFE003D623E /* perfil_transformaciones.swift */,
+				FB13CB692DBFDE7B00D489F3 /* perfil_planeta.swift */,
 			);
 			path = dragon_ball;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 				FBB43E902DA032F500314129 /* dragonball_api.swift in Sources */,
 				FBB43E932DA0341200314129 /* PantallaPersonajes.swift in Sources */,
 				FBB43E8A2DA030AC00314129 /* transformaciones.swift in Sources */,
+				FB13CB6A2DBFDE7B00D489F3 /* perfil_planeta.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

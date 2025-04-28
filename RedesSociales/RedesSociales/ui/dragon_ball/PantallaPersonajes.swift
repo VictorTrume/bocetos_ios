@@ -64,8 +64,9 @@ struct PantallaPersonajes: View {
                                 }
                                 .padding()
                                 .background(Color.blue.opacity(0.9))
-                                .cornerRadius(150)
+                                .cornerRadius(80)
                                 .shadow(radius: 10)
+                                .frame(width: 300)
                             
                                 
                                 }  .simultaneousGesture(TapGesture().onEnded({

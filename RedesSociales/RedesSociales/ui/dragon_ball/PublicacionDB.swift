@@ -55,16 +55,39 @@ struct DetallesPersonaje: View {
                             .padding()
                             .background(Color.yellow)
                             .cornerRadius(10)
-                            .shadow(radius: 5)
+                         
                     }
                     .simultaneousGesture(TapGesture().onEnded({
                     }))
                 }
-                .padding()
+                
+                
+               
+                
+                NavigationLink {
+                    PerfilPlaneta()
+                } label: {
+                    Text("Informacion Planeta")
+                        .fontWeight(.bold)
+                        .font(.system(size: 18))
+                        .foregroundColor(.white)
+                        .frame(maxWidth: .infinity)
+                        .padding()
+                        .background(Color.yellow)
+                        .cornerRadius(10)
+                        
+                }
+                .simultaneousGesture(TapGesture().onEnded({
+                }))
+            }
+            .padding(60)
+                
+                
+                
             }
         }
     }
-}
+
 
 #Preview {
     NavigationStack {

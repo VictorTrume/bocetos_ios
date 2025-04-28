@@ -24,7 +24,19 @@ struct Enlaces: Codable{
 
 }
  
-struct PaginaResultado: Codable { 
+struct PaginaResultado: Codable {
+    //, Identifiable {
+
+    //var id: Int = self.meta.currentPage
+
+    let items: [MonoChino]
+    let meta: Meta
+    let links: Enlaces
+
+
+}
+
+struct PaginaResultadoPlaneta: Codable {
     //, Identifiable {
 
     //var id: Int = self.meta.currentPage
@@ -34,4 +46,8 @@ struct PaginaResultado: Codable {
     let links: Enlaces
 
 }
+
+
+
+
  
