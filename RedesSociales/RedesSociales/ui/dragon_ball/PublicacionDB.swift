@@ -31,7 +31,10 @@ struct DetallesPersonaje: View {
                                 .cornerRadius(12)
                                 
                         }
-                        .frame(width: 150, height: 200)
+                        .background(Color.blue.opacity(0.9))
+                        .cornerRadius(20)
+                        .shadow(radius: 4)
+                        .frame(width: 350, height: 300)
                         .cornerRadius(12)
                     }
                     

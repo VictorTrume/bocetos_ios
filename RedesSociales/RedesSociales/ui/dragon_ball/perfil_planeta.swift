@@ -26,14 +26,21 @@ struct PerfilPlaneta: View {
                     Text("\(controlador.personaje!.originPlanet!.description)")
                         .foregroundColor(.white)
                         .font(.body)
-                        Spacer()
+                        .background(Color.yellow.opacity(0.5))
+                        .cornerRadius(5)
+                        .shadow(radius: 4)
+                        .frame(width: 370, height: 300)
+                        .cornerRadius(12)
+                       
+
+                
 
                     AsyncImage(url: URL(string: controlador.personaje!.originPlanet!.image)) { image in
                         image
                             .image?.resizable()
                             .aspectRatio(contentMode: .fit)
                            
-                            .frame(maxWidth: .infinity)
+                    
                             .clipped()
                             .cornerRadius(10)
                     }
