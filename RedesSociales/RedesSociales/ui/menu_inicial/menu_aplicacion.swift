@@ -17,25 +17,16 @@ struct MenuNavegacion: View {
                 "circle") }
                 .badge(controlador.publicaciones.count)
         
-          Text("Hola mundo")
-                .tabItem{Label("Es esta pantalla",
-                               systemImage: "curcke")}
+            PlanetasList()
+                .tabItem{Label("Planeta",
+                               systemImage: "circle")}
             
             PantallaPersonajes()
-                .tabItem{
-                    Label{
-                        VStack{
-                            Text("Dragon Ball DB")
-                        }
-                        
-                    } icon: {
-                        Circle()
-                        .frame(width: 44,height: 44,alignment: .center)
-                        .overlay(Text("Paquito el paco"))
-                    }
-                }
-            Text("Hola desde pantalla 3")
-                .tabItem { Label("Etiqueta de esta label",
+                .tabItem{Label("Dragon Ball DB",
+                                    systemImage: "circle")}
+            PerfilBasicoVista()
+            
+                .tabItem { Label("Usuario",
                 systemImage: "circle") }
             /*
             Tab("Etiqueta", systemImage: "Perfil"){

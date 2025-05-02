@@ -23,12 +23,16 @@ public class ControladorAplicacion{
     // Seccion Dragon Ball
     var pagina_resultados: PaginaResultado? = nil
     var personaje : MonoChino? = nil
+    var planetas : Planeta? = nil
+    var planeta_lista : PaginaResultadoPlanetas? = nil
     
     init(){
         Task.detached(priority: .high){
             await self.descargar_publicaciones()
             
             await self.descargar_monos_chinos()
+            
+            await self.descargar_planetas()
         }
     }
     
@@ -37,6 +41,13 @@ public class ControladorAplicacion{
         guard let pagina_descargada: PaginaResultado = try? await DragonBallAPI().descargar_pagina_personajes() else{return}
         
         self.pagina_resultados = pagina_descargada
+    }
+    
+    func descargar_planetas() async{
+        guard let pagina_descargada_planetas: PaginaResultadoPlanetas = try? await
+                DragonBallAPI().descargar_pagina_planetas() else{return}
+        
+        self.planeta_lista = pagina_descargada_planetas
     }
     
     
@@ -97,9 +108,21 @@ public class ControladorAplicacion{
         self.personaje = mono_chino
     }
     
+    func descargar_info_planeta(id: Int) async{
+        guard let planetita: Planeta = try? await DragonBallAPI().descargar_informacion_planetas(id: id) else {return}
+        
+        self.planetas = planetita
+    }
+    
     func descargar_informacion_personaje(id: Int){
         Task.detached(operation: {
             await self.descargar_info_personaje(id: id)
+        })
+    }
+    
+    func descargar_informacion_planetas(id: Int){
+        Task.detached(operation: {
+            await self.descargar_info_planeta(id: id)
         })
     }
     
